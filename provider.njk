@@ -1,8 +1,15 @@
 ---
 layout: base.njk
 title: Provider Details
-permalink: /provider/{{ id }}/
+pagination:
+    data: providers
+    size: 1
+    alias: provider
+permalink: /provider/{{ provider.providerid }}/
 ---
+
+<h3>{{ provider.firstname }} {{ provider.lastname }}</h3>
+
 {% block content %}
 <h1>Provider Details</h1>
 
