@@ -46,6 +46,9 @@ typings/
 # IntelliJ
 .idea
 
+# eleventy site files
+_site
+
 # Optional eslint cache
 .eslintcache
 
