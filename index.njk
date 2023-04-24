@@ -7,13 +7,12 @@ title: Providers
 
 <div class="container">
     <div class="row">
-      {% for provider in providers %}
+        {% for provider in providers %}
         <div class="col-md-4">
-          <h3>{{ provider.firstname }} {{ provider.lastname }}</h3>
-          <p>{{ provider.providertype }}</p>
-          <a href="/provider/{{ provider.providerid }}">View Details</a>
+            <h3>{{ provider.firstname }} {{ provider.lastname }}</h3>
+            <p>{{ provider.providertype }}</p>
+            <a href="/provider/{{ provider.providerid }}">View Details</a>
         </div>
-      {% endfor %}
+        {% endfor %}
     </div>
-
-  </div>
+</div>
