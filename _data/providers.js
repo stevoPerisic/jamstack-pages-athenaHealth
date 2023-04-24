@@ -1,7 +1,7 @@
 /**
  * Created by stevoperisic on 4/24/23.
  */
-import fetch from 'node-fetch';
+const fetch = require('cross-fetch');
 
 module.exports = async function () {
     const response = await fetch("https://jamstack.perisicdesigns.workers.dev/providers");
