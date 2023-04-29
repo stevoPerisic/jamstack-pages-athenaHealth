@@ -3,16 +3,36 @@ layout: base.njk
 title: Providers
 ---
 
-<h1>{{ title }}</h1>
-
 <div class="container">
     <div class="row">
-        {% for provider in providers %}
-        <div class="col-md-4">
-            <h3>{{ provider.firstname }} {{ provider.lastname }}</h3>
-            <p>{{ provider.providertype }}</p>
-            <a href="/provider/{{ provider.providerid }}">View Details</a>
+        <!-- Team -->
+        <div class="container content-space-1">
+            <!-- Heading -->
+            <div class="w-lg-65 text-center mx-lg-auto mb-5 mb-sm-7 mb-lg-10">
+                <h2>{{ title }}</h2>
+            </div>
+            <!-- End Heading -->
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3">
+                {% for provider in providers %}
+
+                    <div class="col mb-10">
+                        <!-- Team -->
+                        <div class="w-sm-65 text-center mx-auto">
+                            <img class="img-fluid rounded-3 mb-4"
+                                 src="{{ provider.headshotUrl }}"
+                                 alt="{{ provider.firstname }} {{ provider.lastname }}">
+                            <h5 class="mb-1">{{ provider.firstname }} {{ provider.lastname }}</h5>
+                            <span class="d-block">{{ provider.providertype }}</span>
+                            <span class="d-block">
+                                <a href="/provider/{{ provider.providerid }}">View Details</a>
+                            </span>
+                        </div>
+                        <!-- End Team -->
+                    </div>
+                    <!-- End Col -->
+                {% endfor %}
+            </div>
         </div>
-        {% endfor %}
+
     </div>
 </div>

@@ -8,15 +8,34 @@ pagination:
 permalink: /provider/{{ provider.providerid }}/
 ---
 
-<h1>Provider Details</h1>
+<!-- User Profile -->
+<div class="container content-space-1">
+    <div class="row justify-content-md-center">
+        <div class="col-md-8">
+            <div class="text-center">
+                <img class="avatar avatar-xxl avatar-circle mb-3"
+                     src="{{ provider.headshotUrl }}" alt="{{ provider.firstname }} {{ provider.lastname }}">
 
-<div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <img src="{{ provider.headshotUrl }}" alt="{{ provider.firstname }} {{ provider.lastname }}">
-        <h3>{{ provider.firstname }} {{ provider.lastname }}</h3>
-        <p>{{ provider.providertype }}</p>
-        <p>{{ provider.bio }}</p>
-      </div>
+                <div class="mb-4">
+                    <h3>{{ provider.firstname }} {{ provider.lastname }}</h3>
+                    <span class="d-block mb-1">{{ provider.providertype }}</span>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare turpis quis dui accumsan,
+                        sit amet vehicula velit blandit. Nam porttitor dolor a nulla pulvinar, vitae commodo quam luctus.
+                        Suspendisse potenti. Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+                        ac turpis egestas. Cras ac mollis est. Sed accumsan ante sed pharetra facilisis. Curabitur
+                        porttitor risus consectetur faucibus egestas.
+                    </p>
+                </div>
+
+                <button type="button" class="btn btn-outline-primary btn-sm">
+                    <i class="bi-person-plus-fill me-1"></i> Follow
+                </button>
+            </div>
+        </div>
+        <!-- End Col -->
     </div>
+    <!-- End Row -->
 </div>
+<!-- End User Profile -->
+
